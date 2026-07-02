@@ -4,7 +4,7 @@ on:
   push:
 
   schedule:
-    - cron: '35 16 * * *'   # Every day at 10:05 PM IST
+  - cron: '45 16 * * *'   # Every day at 10:15 PM IST  # Every day at 10:15 PM IST   # Every day at 10:05 PM IST
 
   workflow_dispatch:
 
