@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 30px; /* row gap, column gap */
+}
+
+.cert-item {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.cert-item a {
+    text-decoration: none;
+    color: #1a5fb4;
+}
+
+  :root{
+    --link-blue:#0645AD;
+    --ink:#000000;
+    --rule:#000000;
+  }
+
+  * { box-sizing: border-box; }
+
+  html,body{
+    background:#e9e9e9;
+    margin:0;
+    padding:0;
+    font-family:'EB Garamond', Georgia, 'Times New Roman', serif;
+    color:var(--ink);
+  }
+
+  #page{
+    width:270mm;
+    min-height:297mm;
+    margin:20px auto;
+    background:#fff;
+    border:1.5px solid var(--ink);
+    padding:10mm;
+}
+
+  @media print{
+    html,body{ background:#fff; }
+    #page{ margin:0; border:none; max-width:none; padding:0; }
+    .toolbar{ display:none !important; }
+  }
+
+  .toolbar{
+    max-width:750px;
+    margin:14px auto 0 auto;
+    font-family:Arial, sans-serif;
+    font-size:13px;
+    color:#333;
+    background:#fff8d6;
+    border:1px solid #e0d38a;
+    border-radius:6px;
+    padding:10px 14px;
+    line-height:1.5;
+  }
+  .toolbar b{ color:#000; }
+
+  [contenteditable="true"]{ outline:none; }
+  [contenteditable="true"]:hover{ background:#fbf6d9; }
+  [contenteditable="true"]:focus{ background:#fdf3b0; }
+
+  /* Links: NOT contenteditable, so a normal click opens them.
+     Double-click a link to edit its text + URL via a popup prompt. */
+  a{
+    color:var(--link-blue);
+    text-decoration:none;
+    cursor:pointer;
+  }
+  a:hover{ text-decoration:underline; }
+  a.editable-link{ border-bottom:1px dashed transparent; }
+  a.editable-link:hover{ border-bottom:1px dashed var(--link-blue); text-decoration:none; }
+
+  /* ---------- Header ---------- */
+  h1.name{
+    text-align:center;
+    font-weight:600;
+    font-variant:small-caps;
+    letter-spacing:2px;
+    font-size:34px;
+    margin:0 0 6px 0;
+  }
+  .address{
+    text-align:center;
+    font-size:14px;
+    margin:0 0 4px 0;
+  }
+  .contact-row{
+    text-align:center;
+    font-size:13.5px;
+    margin:0 0 14px 0;
+  }
+  .contact-row span.item{ margin:0 10px; white-space:nowrap; }
+  .contact-row i{ margin-right:4px; color:var(--ink); }
+
+  /* ---------- Section headings ---------- */
+  h2.section{
+    font-variant:small-caps;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:1px;
+    border-bottom:1.4px solid var(--rule);
+    padding-bottom:2px;
+    margin:18px 0 8px 0;
+  }
+
+  .entry{ margin-bottom:8px; }
+  .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+  }
+  .row .left{ font-weight:700; }
+  .row .right{ font-weight:700; text-align:right; white-space:nowrap; }
+  .row.sub .left{ font-weight:400; font-style:italic; }
+  .row.sub .right{ font-weight:400; font-style:italic; }
+
+  ul.bullets{ margin:4px 0 2px 0; padding-left:20px; }
+  ul.bullets li{ font-size:14.5px; line-height:1.35; margin-bottom:1px; }
+
+  ul.grid4{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    padding-left:0;
+    margin:4px 0 2px 0;
+  }
+  ul.grid4 li{ font-size:14px; position:relative; padding-left:14px; }
+  ul.grid4 li::before{ content:"\2022"; position:absolute; left:0; }
+
+  .skills-block{ font-size:14.5px; line-height:1.6; margin-top:4px; }
+  .skills-block .label{ font-weight:700; }
+
+  hr.thin{ border:none; border-top:1px solid var(--ink); margin:6px 0 10px 0; }
+</style>
+</head>
+<body>
+
+
+
+<div id="page">
+
+  <!-- ============ HEADER ============ -->
+  <h1 class="name" contenteditable="true">Om Deshmukh</h1>
+  <p class="address" contenteditable="true">Khopoli (410203), Maharashtra</p>
+  <p class="contact-row">
+    <span class="item"><i class="fa-solid fa-phone"></i><span contenteditable="true">+91-8262089437</span></span>
+    <span class="item"><i class="fa-solid fa-envelope"></i><a class="editable-link" href="mailto:omdeshmukh304@gmail.com" data-type="email">omdeshmukh304@gmail.com</a></span>
+    <span class="item"><i class="fa-brands fa-linkedin"></i><a class="editable-link" href="https://www.linkedin.com/in/om-deshmukh-072441369" target="_blank" rel="noopener" data-type="url">https://www.linkedin.com/in/om-deshmukh-072441369</a></span>
+    <span class="item"><i class="fa-brands fa-github"></i><a class="editable-link" href="https://github.com/omdeshmukh304-create" target="_blank" rel="noopener" data-type="url">github.com/omdeshmukh304-create</a></span>
+  </p>
+
+  <!-- ============ EDUCATION ============ -->
+  <h2 class="section">Education</h2>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Pillai HOC College of Engineering and Technology</span>
+      <span class="right" contenteditable="true">2024 &ndash; 2028</span>
+    </div>
+    <div class="row sub">
+      <span class="left" contenteditable="true">Bachelor of Engineering in Information Technology</span>
+      <span class="right" contenteditable="true">Rasayani, Maharashtra</span>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Janta Junior College</span>
+      <span class="right" contenteditable="true">2022 &ndash; 2024</span>
+    </div>
+    <div class="row sub">
+      <span class="left" contenteditable="true">HSC board - 12th - <b>percentage</b> &ndash; <b>77.30%</b></span>
+      <span class="right" contenteditable="true">Khopoli, Maharashtra</span>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Carmel Convent School</span>
+      <span class="right" contenteditable="true"> 2022 </span>
+    </div>
+    <div class="row sub">
+      <span class="left" contenteditable="true">SSC Board - 10th - <b>percentage</b> &ndash; <b>84.80%</b></span>
+      <span class="right" contenteditable="true">Khopoli, Maharashtra</span>
+    </div>
+  </div>
+
+  <!-- ============ TECHNICAL SKILLS ============ -->
+  <h2 class="section">Technical Skills</h2>
+  <ul class="">
+    <li contenteditable="true">Cloud Platforms: AWS (EC2, EKS, ECR, S3, IAM, VPC)</li>
+    <li contenteditable="true">Programming & Automation: Python, Bash(Shell Scripting), SQL, Temporal, Ollama, LangChain & langGraph</li>
+    <li contenteditable="true">Infrastructure as Code & Configuration Management: Terraform, Ansible</li>
+    <li contenteditable="true">Containerization & Orchestration: Docker, Docker Compose, Kubernetes, Helm, ArgoCD</li>
+    <li contenteditable="true">CI/CD & DevSecOps: Git, GitHub, GitHub Actions, GitOps, Trivy, Gitleaks</li>
+    <li contenteditable="true">Monitoring & Observability: Prometheus, Grafana, Loki, OpenTelemetry</li>
+  </ul>
+
+  <!-- ============ EXPERIENCE / INTERNSHIPS ============ -->
+  <h2 class="section">Experience/Internships</h2>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">InTrAinZ</span>
+      <span class="right" contenteditable="true">Aug 2025 - Oct 2025</span>
+    </div>
+    <div class="row sub">
+      <span class="left" contenteditable="true">Cloud Intern</span>
+      <span class="right" contenteditable="true">Remote</span>
+    </div>
+    <ul class="bullets">
+      <li contenteditable="true">Completed a Cloud Computing internship with hands-on exposure to cloud infrastructure, deployment workflows, and modern cloud computing concepts, gaining practical knowledge of industry-standard practices.</li>
+      <li contenteditable="true">Developed a strong understanding of cloud architecture, virtualization, networking, storage, resource provisioning, and security fundamentals through hands-on labs and real-world learning exercises.</li>
+      <li contenteditable="true">Strengthened foundational skills in cloud computing by working with AWS cloud services, improving problem-solving abilities and building a solid base for DevOps, automation, and cloud-native technologies.</li>
+    </ul>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <h2 class="section">Projects</h2>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">AI BankApp</span>
+      <span class="right" contenteditable="true">May 2026</span>
+    </div>
+    <ul class="bullets">
+      <li contenteditable="true">Deployed and monitored an AI-powered banking application on AWS EKS, using Terraform to provision infrastructure while ensuring auto-scaling and high availability.</li>
+      <li contenteditable="true">Managed application deployments using Kubernetes manifests and Docker containerization for consistent and reliable deployments.</li>
+      <li contenteditable="true"> Automated the CI/CD workflow with GitHub Actions, implemented GitOps deployment using ArgoCD, and integrated DevSecOps practices using Trivy for container image vulnerability scanning and Gitleaks for secret detection before deployment.</li>
+      <li contenteditable="true">Configured a Prometheus + Grafana observability stack to collect real-time metrics, monitor application health, and generate alerts, achieving 99.99% uptime.</li>
+      <li contenteditable="true">Reduced simulated time-to-market by 80% compared to the manual deployment baseline and decreased incident count by 90% through automated health checks and self-healing policies.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Kubehealer</span>
+      <span class="right" contenteditable="true">July 2026</span>
+    </div>
+    <ul class="bullets">
+      <li contenteditable="true">Developed KubeHealer, an AI-powered self-healing platform for Kubernetes using Python and Temporal to automate incident detection, workflow orchestration, and recovery processes.</li>
+      <li contenteditable="true">Integrated Ollama-powered LLMs with AI agents to analyze Kubernetes failures, perform root cause analysis (RCA), and recommend intelligent remediation actions for production incidents.</li>
+      <li contenteditable="true"> Designed automated remediation workflows using LangGraph to detect pod failures, execute recovery actions, and reduce manual troubleshooting efforts while improving incident resolution time.</li>
+      <li contenteditable="true">Built a modular, event-driven architecture by combining Kubernetes, Temporal, Python, and AI agents to streamline production operations, improve platform reliability, and automate operational tasks.</li>
+    </ul>
+  </div>
+
+  <!-- <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Name | Python, Selenium, Google Cloud Console</span>
+      <span class="right" contenteditable="true">January 2021</span>
+    </div>
+    <ul class="bullets">
+      <li contenteditable="true">Description line 1.</li>
+      <li contenteditable="true">Description line 2</li>
+      <li contenteditable="true">Description line 3.</li>
+    </ul>
+  </div> -->
+
+  <!-- ============ CERTIFICATION ============ -->
+  <h2 class="section">CERTIFICATION</h2>
+  
+  <div class="skills-block">
+    <div class="cert-grid">
+
+        <div class="cert-item">
+            <strong>Certified DevOps Engineer – Associate</strong><br>
+            <a href="https://www.trainwithshubham.com/share-certificate?serialno=HZHMIKOK">View Certificate</a>
+        </div>
+
+        <div class="cert-item">
+            <strong>InTrAinZ Cloud Computing Internship Certificate</strong><br>
+            <a href="https://www.trainwithshubham.com/share-certificate?serialno=HZHMIKOK">View Certificate</a>
+        </div>
+
+        <div class="cert-item">
+            <strong>Python Programming Certificate</strong><br>
+            <a href="https://www.trainwithshubham.com/share-certificate?serialno=TWS392">View Certificate</a>
+        </div>
+
+        <div class="cert-item">
+            <strong>Agentic AI for DevOps Certificate</strong><br>
+            <a href="#">View Certificate</a>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- ##============ EXTRACURRICULAR ============ -->
+  <h2 class="section">Extracurricular</h2>
+  <div class="entry">
+    <div class="row">
+      <span class="left" contenteditable="true">Taluka Level Volleyball Player, Zonal level Skater</span>
+      <span class="right" contenteditable="true">2018</span>
+    </div>
+    <div class="row sub">
+      <span class="left" contenteditable="true">Sports Participant</span>
+      <span class="right" contenteditable="true"></span>
+    </div>
+    <ul class="bullets">
+      <li contenteditable="true">Basket Ball, Kabaddi and Disk Throw in tournaments</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  // Double-click any link to edit its visible text and its destination URL.
+  document.querySelectorAll('a.editable-link').forEach(function(link){
+    link.addEventListener('dblclick', function(e){
+      e.preventDefault();
+      var newText = prompt('Link text to display:', link.textContent.trim());
+      if (newText === null) return;
+      newText = newText.trim();
+      if (newText === '') return;
+
+      var currentTarget = link.dataset.type === 'email'
+        ? link.href.replace(/^mailto:/, '')
+        : link.href;
+
+      var newTarget = prompt('Link destination:', currentTarget);
+      if (newTarget === null) return;
+      newTarget = newTarget.trim();
+      if (newTarget === '') return;
+
+      link.textContent = newText;
+      if (link.dataset.type === 'email') {
+        link.href = 'mailto:' + newTarget;
+      } else {
+        if (!/^https?:\/\//i.test(newTarget)) newTarget = 'https://' + newTarget;
+        link.href = newTarget;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
