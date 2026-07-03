@@ -1,10 +1,13 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
   push:
     branches:
       - main
+
+  schedule:
+    # 12:00 AM IST = 6:30 PM UTC (previous day)
+    - cron: '30 18 * * *'
 
   workflow_dispatch:
 
